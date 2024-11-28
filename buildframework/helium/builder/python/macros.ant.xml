@@ -57,7 +57,7 @@ Description:
         <delete includeemptydirs="true">
             <fileset dir="${basedir}/lib" includes="*.egg-info/"/>
         </delete>
-        <move file="${module.bin.dir}/${ant.project.name}-0.1-py2.6.egg" tofile="${module.bin.dir}/${ant.project.name}.egg" />
+        <move file="${module.bin.dir}/${ant.project.name}-0.1-py2.7.egg" tofile="${module.bin.dir}/${ant.project.name}.egg" />
         
         <ivy:publish artifactspattern="${module.bin.dir}/[artifact].[ext]" 
                         resolver="local"

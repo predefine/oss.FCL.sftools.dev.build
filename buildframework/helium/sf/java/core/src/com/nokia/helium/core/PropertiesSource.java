@@ -58,6 +58,14 @@ public class PropertiesSource extends AbstractTemplateInputSource {
         }
     }
 
+    public PropertiesSource(String name, Hashtable<String, Object> props) {
+        setSourceName(name);
+        properties = new Hashtable<String, String>();
+        props.forEach((k, v)->
+            properties.put((String) k, (String) v)
+        );
+    }
+
     /**
      * Get properties.
      * 

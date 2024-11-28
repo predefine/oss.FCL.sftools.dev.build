@@ -179,7 +179,7 @@ public class TaskRecorder extends Task implements TaskContainer {
          * @return
          * @see org.apache.tools.ant.Project#getProperties()
          */
-        public Hashtable getProperties() {
+        public Hashtable<String,Object> getProperties() {
             if (useDelegate) {
                 return delegate.getProperties();
             } else {
@@ -203,7 +203,7 @@ public class TaskRecorder extends Task implements TaskContainer {
          * @return
          * @see org.apache.tools.ant.Project#getUserProperties()
          */
-        public Hashtable getUserProperties() {
+        public Hashtable<String,Object> getUserProperties() {
             if (useDelegate) {
                 return delegate.getUserProperties();
             } else {

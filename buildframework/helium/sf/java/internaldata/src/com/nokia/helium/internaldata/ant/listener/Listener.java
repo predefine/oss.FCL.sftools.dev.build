@@ -89,10 +89,10 @@ public class Listener implements BuildListener, SubBuildListener {
         Hashtable<String, String> properties = new Hashtable<String, String>();
         if (buildNode != null) {
             Project project = (Project)buildNode.getReference();
-            Hashtable<String, String> projProps = project.getProperties();
+            Hashtable<String, Object> projProps = project.getProperties();
             for (int i = 0; i < propList.length; i++) {
                 if (projProps.containsKey(propList[i])) {
-                    properties.put(propList[i], projProps.get(propList[i]));
+                    properties.put(propList[i], (String) projProps.get(propList[i]));
                 }
             }
         }

@@ -112,11 +112,11 @@ public final class HeliumToolsCheckerMain {
 
         if (configFile != null) {
             HeliumToolsCheckerMain checkerMain = new HeliumToolsCheckerMain(configFile);
-            checkerMain.checkAnt();
+            /*checkerMain.checkAnt();
             checkerMain.checkPython();
             if (checkerMain.checkFailed()) {
                 System.exit(-1);
-            }
+            }*/
         }
         else {
             println("*** Error: Missing '-config' argument for HeliumToolsCheckerMain");

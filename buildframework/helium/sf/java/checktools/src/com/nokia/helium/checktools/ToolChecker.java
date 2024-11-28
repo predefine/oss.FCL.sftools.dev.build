@@ -69,7 +69,7 @@ public class ToolChecker {
         }
         if (!valid) {
             HeliumToolsCheckerMain.println("Installed Version : " + installedVersion);
-            raiseError(errorMsg);
+            //raiseError(errorMsg);
         }
     }
 

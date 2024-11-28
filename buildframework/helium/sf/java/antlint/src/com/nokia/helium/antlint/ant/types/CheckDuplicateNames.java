@@ -77,7 +77,7 @@ public class CheckDuplicateNames extends AbstractProjectCheck {
     @SuppressWarnings({ "unchecked", "rawtypes" })
     private void setHeliumTaskList(RootAntObjectMeta root) {
         heliumTaskList = new ArrayList<String>();
-        Hashtable<String, Class<Object>> taskdefs = root.getRuntimeProject().getTaskDefinitions();
+        Hashtable<String, Class<?>> taskdefs = root.getRuntimeProject().getTaskDefinitions();
         List<String> list = new ArrayList<String>(taskdefs.keySet());
         for (String taskName : list) {
             Class clazz = taskdefs.get(taskName);

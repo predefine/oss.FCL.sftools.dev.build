@@ -81,7 +81,7 @@ Description:
     
     <target name="compile" depends="resolve" description="--> compile the project">
         <mkdir dir="${classes.dir}" />
-        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="lib.path.id" debug="true" source="1.6" target="1.6" listfiles="true"> 
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="lib.path.id" debug="true" source="1.8" target="1.8" listfiles="true"> 
             <compilerarg value="-Xlint:unchecked" />
             <compilerarg value="-Xlint:deprecation" />
             <compilerarg value="-Werror" />

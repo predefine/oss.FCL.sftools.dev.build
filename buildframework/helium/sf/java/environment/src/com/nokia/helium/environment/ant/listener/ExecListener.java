@@ -98,7 +98,7 @@ public class ExecListener implements BuildListener {
             logger.debug("Found exec task");
             if (task instanceof UnknownElement) {
                 RuntimeConfigurable configurable = ((UnknownElement) task).getRuntimeConfigurableWrapper();
-                Hashtable<String, String> map = configurable.getAttributeMap();
+                Hashtable<String, Object> map = configurable.getAttributeMap();
                 String executable = (String) map.get("executable");
                 Project project = event.getProject();
                 executable = project.replaceProperties(executable);

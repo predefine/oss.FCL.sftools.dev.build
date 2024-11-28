@@ -220,7 +220,7 @@ public class HlmAntUnitListener extends BaseAntUnitListener {
      */
     @SuppressWarnings("unchecked")
     private void addMacros(Project project) {
-        Hashtable<String, Class> projectMacros = project.getTaskDefinitions();
+        Hashtable<String, Class<?>> projectMacros = project.getTaskDefinitions();
         Enumeration<String> macrosEnum = projectMacros.keys();
         while (macrosEnum.hasMoreElements()) {
             String key = macrosEnum.nextElement();
@@ -243,7 +243,7 @@ public class HlmAntUnitListener extends BaseAntUnitListener {
      */
     @SuppressWarnings("unchecked")
     private void addScriptDefs(Project project) {
-        Hashtable<String, Class> projectMacros = project.getTaskDefinitions();
+        Hashtable<String, Class<?>> projectMacros = project.getTaskDefinitions();
         Enumeration<String> scriptDefsEnum = projectMacros.keys();
         while (scriptDefsEnum.hasMoreElements()) {
             String key = scriptDefsEnum.nextElement();
